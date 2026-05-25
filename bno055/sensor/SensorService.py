@@ -156,6 +156,7 @@ class SensorService:
             self.node.get_logger().info('Bosch BNO055 IMU configuration complete.')
         else:
             self.node.get_logger().error('Bosch BNO055 IMU configuration complete with errors.')
+            sys.exit(1)
 
     def publish_imu_raw(self, buf):
         imu_raw_msg = Imu()
